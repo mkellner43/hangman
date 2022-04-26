@@ -1,0 +1,17 @@
+---
+random_word: 'kodak
+
+  '
+guessed:
+- k
+- o
+- t
+- load
+- d
+display_arr:
+- k
+- o
+- d
+- _
+- k
+turn_count: 2

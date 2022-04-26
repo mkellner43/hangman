@@ -1,0 +1,14 @@
+---
+random_word: 'queen
+
+  '
+guessed:
+- q
+- u
+display_arr:
+- q
+- u
+- _
+- _
+- _
+turn_count: 0
