@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'save_game'
 require_relative 'text'
 require 'rubygems'
@@ -126,7 +124,7 @@ class Game
   def guessed_letters(guess)
     @guessed.push(guess)
     puts messages('guessed')
-    guess
+    guess()
   end
 end
 
