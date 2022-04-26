@@ -39,7 +39,6 @@ class Game
 
   def display
     count = 0
-    puts "\n#{@random_word}\n"
     until count == @random_word.length - 1
       @display_arr.push('_')
       count += 1
@@ -56,7 +55,7 @@ class Game
   end
 
   def valid_guess?(guess)
-    if guess.match(/[a-z]/) && (guess.length == 1) && (guessed.include?(guess) == false)
+    if guess.match(/[a-z]/) && (guess.length == 1) && (@guessed.include?(guess) == false)
       true
     elsif guess == 'save'
       save_this_game
@@ -79,7 +78,7 @@ class Game
     when '2'
       load_this_game
     else
-      puts messgaes('invalid_game_start')
+      puts messages('invalid_game_start')
       @answer = gets.chomp.to_s
       game_start_type
     end
@@ -87,7 +86,7 @@ class Game
 
   def check(guess)
     correct = false
-    valid_guess?(guess)
+    valid_guess?(guess) == true ? true : guess()
     @random_word.split('').each_with_index do |letter, idx|
       next unless letter == guess
 
